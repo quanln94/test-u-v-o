@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <h1 id="heading">My Book!!</h1>
+    <div id="allbutton">
+      <button id="all">Tất cả</button>
+      <button id="unread">Chưa đọc</button>
+      <button id="read">Đã đọc</button>
+      <button id="add">Thêm sách sẽ đọc</button>
+    </div>
+    <img src="" alt="" />
+    <div id="booklist"><read-list></read-list><unread-list></unread-list></div>
+    <div id="formadd" style="visibility: hidden">
+      <label for="">Tên sách</label>
+      <input type="text" name="" id="namebook" />
+      <label for="">Tên tác giả</label>
+      <input type="text" name="" id="aubook" />
+      <label for="">Ảnh</label>
+      <input type="text" name="" id="imgbook" />
+      <div id="error"></div>
+      <button id="ok">OK</button>
+    </div>
+  </body>
+
+
+  <template id="readlist">
+    <link rel="stylesheet" href="style.css" />
+    <div class="container" id="rlist"></div>
+  </template>
+  <template id="unreadlist">
+    <link rel="stylesheet" href="style.css" />
+    <div class="container" id="urlist"></div>
+  </template>
+  <template id="bookitem">
+    <link rel="stylesheet" href="style.css" />
+    <div class="bookitem" id="item">
+      <div id="img"></div>
+      <div id="name"></div>
+      <div id="author"></div>
+      <div id="mark">Chuyển chưa đọc -- đã đọc</div>
+    </div>
+  </template>
+
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyD6W7CJqVafkMOsBJScWkWbPtzFRvbI6x0",
+      authDomain: "ci44-91c6e.firebaseapp.com",
+      databaseURL: "https://ci44-91c6e.firebaseio.com",
+      projectId: "ci44-91c6e",
+      storageBucket: "ci44-91c6e.appspot.com",
+      messagingSenderId: "891521744654",
+      appId: "1:891521744654:web:a10b8cc9970e36c7e6215f",
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+  <script src="./bai3.js"></script>
+</html>
